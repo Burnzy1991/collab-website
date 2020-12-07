@@ -16,12 +16,12 @@
         <link href="https://fonts.googleapis.com/css?family=Varela+Round" rel="stylesheet" />
         <link href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i" rel="stylesheet" />
 
-        <link href="{% static 'css/home.css' %}" rel="stylesheet"></link>
+        <link  rel="stylesheet" href="{% static 'css/home.css' %}"   type="text/css" title="home.css"></link>
 
     </head>
     <body id="page-top">
         <!-- Navigation-->
-        <nav class="navbar navbar-expand-lg navbar-light fixed-top" id="mainNav">
+        <nav class="navbar navbar-expand-lg navbar-dark fixed-top" >
             <div class="container">
                 <a class="navbar-brand js-scroll-trigger" href="#page-top">Massage Therapy</a>
                 <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
@@ -45,16 +45,16 @@
                     <h1 class="mx-auto my-0 text-uppercase">Chelsea Kwiatkowski</h1>
                     <h2 class="text-white-50 mx-auto mt-2 mb-5"></h2>
                     <a class="btn btn-primary js-scroll-trigger" href="#about">Get Started</a>
-
                 </div>
-            </div>
+              </div>
+
         </header>
         <!-- About-->
         <section class="about-section text-center" id="about">
             <div class="container">
                 <div class="row">
                     <div class="col-lg-8 mx-auto">
-                        <h2 class="text-white mb-4">insert text</h2>
+                        <h2 class="text-white mb-8"></h2>
                         <p class="text-white-50">
                         </p>
                     </div>
@@ -67,11 +67,11 @@
             <div class="container">
                 <!-- Featured Project Row-->
                 <div class="row align-items-center no-gutters mb-4 mb-lg-5">
-                    <div class="col-xl-8 col-lg-7"><img class="img-fluid mb-3 mb-lg-0" src="{% static 'img/massage.jpg' %}" alt="" /></div>
+                    <div class="col-xl-3 col-lg-steve mx-auto"><img class="img-fluid mb-3 mb-lg-0" src="{% static 'img/chelsea.jpg' %}" alt="" /></div>
                     <div class="col-xl-4 col-lg-5">
                         <div class="featured-text text-center text-lg-left">
                             <h4></h4>
-                            <p class="text-black-50 mb-0">General massage text</p>
+                            <p class="text-black-50 mb-0"><strong>"I love helping people!"</strong></p>
                         </div>
                     </div>
                 </div>
@@ -83,7 +83,9 @@
                             <div class="d-flex h-100">
                                 <div class="project-text w-100 my-auto text-center text-lg-left">
                                     <h4 class="text-white"></h4>
-                                    <p class="mb-0 text-white-50">indie massage text</p>
+                                    <p class="mb-0 text-white-50"><strong>What is an indie head massage?</strong>
+Indie Head Massage, also known as “Champissage”, is a form of massage therapy based on the ancient healing system of “Ayurveda”. Warm oil is applied to the scalp and hair, and combined with deep therapeutic massage to the face, scalp, neck and shoulders.</p>
+                                    <p class='mb-0 text-white-50'><a href="/services"><strong>Read More...</strong></a></p>
                                     <hr class="d-none d-lg-block mb-0 ml-0" />
                                 </div>
                             </div>
@@ -98,30 +100,67 @@
                             <div class="d-flex h-100">
                                 <div class="project-text w-100 my-auto text-center text-lg-right">
                                     <h4 class="text-white"></h4>
-                                    <p class="mb-0 text-white-50">Cupping text</p>
+                                    <p class="mb-0 text-white-50"><strong>What is cupping?</strong>
+Cupping therapy is an ancient form of alternative medicine in which a therapist puts special cups on your skin for a few minutes to create suction. People get it for many purposes, including to help with pain, inflammation, blood flow, relaxation and well-being, and as a type of deep-tissue massage.</p>
                                     <p class="mb-0 text-white-50"></p>
+                                    <p class='mb-0 text-white-50'><a href="/services"><strong>Read More...</strong></a></p>
                                     <hr class="d-none d-lg-block mb-0 mr-0" />
                                 </div>
                             </div>
                         </div>
                     </div>
                 </div>
+            <div class="row justify-content-center no-gutters mb-5 mb-lg-0">
+                <div class="col-lg-6"><img class="img-fluid" src="{% static 'img/massage.jpg' %}" alt="" /></div>
+                <div class="col-lg-6">
+                    <div class="bg-black text-center h-100 project">
+                        <div class="d-flex h-100">
+                            <div class="project-text w-100 my-auto text-center text-lg-left">
+                                <h4 class="text-white"></h4>
+                                <p class="mb-0 text-white-50"><strong>What is Swedish massage?</strong> Swedish massage is one of the most commonly offered massage techniques. It’s sometimes called a classic massage. The technique aims to promote relaxation by releasing muscle tension.
+
+Swedish massage is gentler than deep tissue massage and better suited for people interested in relaxation and tension relief. </p>
+                                <p class='mb-0 text-white-50'><a href="/services"><strong>Read More...</strong></a></p>
+                                <hr class="d-none d-lg-block mb-0 ml-0" />
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
+          <div class="row justify-content-center no-gutters">
+              <div class="col-lg-6"><img class="img-fluid" src="{% static 'img/stretching.jpg' %}" alt="" /></div>
+              <div class="col-lg-6 order-lg-first">
+                  <div class="bg-black text-center h-100 project">
+                      <div class="d-flex h-100">
+                          <div class="project-text w-100 my-auto text-center text-lg-right">
+                              <h4 class="text-white"></h4>
+                              <p class="mb-0 text-white-50"><strong>How is stretching beneficial?</strong>
+ text here</p>
+                              <p class="mb-0 text-white-50"></p>
+                              <p class='mb-0 text-white-50'><a href="/services"><strong>Read More...</strong></a></p>
+                              <hr class="d-none d-lg-block mb-0 mr-0" />
+                          </div>
+                      </div>
+                  </div>
+              </div>
+          </div>
+        </div>
         </section>
         <!-- Signup-->
-        <section class="signup-section" id="signup">
+        <section class="testimonial-section" id="signup">
             <div class="container">
                 <div class="row">
                     <div class="col-md-10 col-lg-8 mx-auto text-center">
-                        <i class="far fa-paper-plane fa-2x mb-2 text-white"></i>
-                        <h2 class="text-white mb-5">Subscribe to receive updates!</h2>
-                        <form class="form-inline d-flex">
-                            <input class="form-control flex-fill mr-0 mr-sm-2 mb-3 mb-sm-0" id="inputEmail" type="email" placeholder="Enter email address..." />
-                            <button class="btn btn-primary mx-auto" type="submit">Subscribe</button>
+                        <i class="fas fa-comments fa-2x mb-2"></i>
+                        <form action="/your-name/" method="post">
+                          {% csrf_token %}
+                          {{ form }}
+                          <input type="submit" value="Submit">
                         </form>
                     </div>
                 </div>
             </div>
+
         </section>
         <!-- Contact-->
         <section class="contact-section bg-black">
