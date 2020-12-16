@@ -1,23 +1,38 @@
-from django.shortcuts import render
 from django.http import HttpResponse
 from django.http import HttpResponseRedirect
-from .forms import HomeTest
+from .forms import Comment
+from django.views import generic
+from .models import Post
+from django.views.generic import TemplateView
+from django.shortcuts import render, get_object_or_404
 # Create your views here.
 
-def testimonial(request):
-    # if this is a POST request we need to process the form data
+
+
+class HomeView(TemplateView):
+    template_name = "home.html"
+
+
+def post_detail(request):
+    template_name = 'post_detail.html'
+    post = get_object_or_404(Post)
+    comments = post.comments.filter(active=True)
+    new_comment = None
+    # Comment posted
     if request.method == 'POST':
-        # create a form instance and populate it with data from the request:
-        form = HomeTest(request.POST)
-        # check whether it's valid:
-        if form.is_valid():
-            # process the data in form.cleaned_data as required
-            # ...
-            # redirect to a new URL:
-            return HttpResponseRedirect('/aboutme')
+        comment_form = CommentForm(data=request.POST)
+        if comment_form.is_valid():
 
-    # if a GET (or any other method) we'll create a blank form
+            # Create Comment object but don't save to database yet
+            new_comment = comment_form.save(commit=False)
+            # Assign the current post to the comment
+            new_comment.post = post
+            # Save the comment to the database
+            new_comment.save()
     else:
-        form = HomeTest()
+        comment_form = CommentForm()
 
-    return render(request, 'home.html', {'form': form})
+    return render(request, template_name, {'post': post,
+                                           'comments': comments,
+                                           'new_comment': new_comment,
+                                           'comment_form': comment_form})

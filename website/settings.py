@@ -4,6 +4,7 @@ import os
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
 TEMPLATES_DIRS = os.path.join(BASE_DIR,'templates')
+CRISPY_TEMPLATE_PACK = 'bootstrap4'
 
 
 # Quick-start development settings - unsuitable for production
@@ -32,6 +33,7 @@ INSTALLED_APPS = [
     'contact',
     'services',
     'faq',
+    'crispy_forms'
 ]
 
 MIDDLEWARE = [

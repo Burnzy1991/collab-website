@@ -1,0 +1,16 @@
+
+<section class="testimonial-section" id="signup">
+      <div class="container">
+          <div class="row">
+              <div class="col-md-10 col-lg-8 mx-auto text-center">
+                  <i class="fas fa-comments fa-2x mb-2"></i>
+                  <form action="/your-name/" method="post">
+                    {% csrf_token %}
+                    {{ form }}
+                    <input type="submit" value="Submit">
+                  </form>
+              </div>
+          </div>
+      </div>
+
+  </section>
