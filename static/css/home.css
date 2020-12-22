@@ -1333,6 +1333,11 @@ pre code {
     max-width: 100%;
   }
 
+  .col-lg-a {
+    flex: 0 0 58.3333333333%;
+    max-width: 10%;
+  }
+
   .order-lg-first {
     order: -1;
   }
@@ -1543,6 +1548,12 @@ pre code {
     flex: 0 0 100%;
     max-width: 100%;
   }
+
+  .col-xl-a {
+    flex: 0 0 100%;
+    max-width: 35%;
+  }
+
 
   .order-xl-first {
     order: -1;
@@ -6282,6 +6293,10 @@ button.bg-black:focus {
 
 .bg-transparent {
   background-color: transparent !important;
+}
+
+.bg-jake {
+  background-color: #6c757d !important;
 }
 
 .border {

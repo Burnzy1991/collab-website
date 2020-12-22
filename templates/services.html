@@ -6,10 +6,8 @@
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
         <meta name="description" content="" />
         <meta name="author" content="" />
-        <title>Chelsea massage | Home</title>
-        <link rel="icon" type="image/x-icon" href="assets/img/favicon.ico" />
-        <link href="{% static 'css/services.css' %}" rel="stylesheet"></link>
-        <script src="{% static 'js/services.js' %}"></script>
+        <title>Chelsea massage | Services</title>
+        <link rel="icon" type="image/x-icon" href="{% static 'img/canvas.png' %}"></link>
 
         <!-- Font Awesome icons (free version)-->
         <script src="https://use.fontawesome.com/releases/v5.15.1/js/all.js" crossorigin="anonymous"></script>
@@ -17,23 +15,23 @@
         <link href="https://fonts.googleapis.com/css?family=Varela+Round" rel="stylesheet" />
         <link href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i" rel="stylesheet" />
         <!-- Core theme CSS (includes Bootstrap)-->
-        <link href="css/home.css" rel="stylesheet" />
+        <link rel="stylesheet" href="{% static 'css/home.css' %}"  type="text/css" title="home css"></link>
     </head>
     <body id="page-top">
         <!-- Navigation-->
         <nav class="navbar navbar-expand-lg navbar-light fixed-top" id="mainNav">
             <div class="container">
-                <a class="navbar-brand js-scroll-trigger" href="#page-top">Massage Therapy</a>
+                <a class="navbar-brand js-scroll-trigger" href="{% url 'home' %}">Home Page</a>
                 <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
                     Menu
                     <i class="fas fa-bars"></i>
                 </button>
                 <div class="collapse navbar-collapse" id="navbarResponsive">
                     <ul class="navbar-nav ml-auto">
-                        <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#about">About Me</a></li>
-                        <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#projects">Services</a></li>
-                        <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#signup">F.A.Q</a></li>
-                        <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#signup">Contact</a></li>
+                        <li class="nav-item"><a class="nav-link js-scroll-trigger" href="/aboutme">About Me</a></li>
+                        <li class="nav-item"><a class="nav-link js-scroll-trigger" href="/services">Services</a></li>
+                        <li class="nav-item"><a class="nav-link js-scroll-trigger" href="/faq">F.A.Q</a></li>
+                        <li class="nav-item"><a class="nav-link js-scroll-trigger" href="/contacts">Contact</a></li>
                     </ul>
                 </div>
             </div>
@@ -42,7 +40,7 @@
         <header class="masthead">
             <div class="container d-flex h-100 align-items-center">
                 <div class="mx-auto text-center">
-                    <h1 class="mx-auto my-0 text-uppercase">Chelsea Kwiatkowski</h1>
+                    <h1 class="mx-auto my-0 text-uppercase">Offered Services</h1>
                     <h2 class="text-white-50 mx-auto mt-2 mb-5"></h2>
                     <a class="btn btn-primary js-scroll-trigger" href="#about">Get Started</a>
                 </div>
@@ -53,7 +51,7 @@
             <div class="container">
                 <div class="row">
                     <div class="col-lg-8 mx-auto">
-                        <h2 class="text-white mb-4">insert text</h2>
+                        <h2 class="text-white mb-4">Avalible Services</h2>
                         <p class="text-white-50">
 
                         </p>
@@ -64,26 +62,47 @@
         </section>
         <!-- Projects-->
         <section class="projects-section bg-light" id="projects">
-            <div class="container">
                 <!-- Featured Project Row-->
-                <div class="row align-items-center no-gutters mb-4 mb-lg-5">
-                    <div class="col-xl-8 col-lg-7"><img class="img-fluid mb-3 mb-lg-0" src="assets/img/bg-masthead.jpg" alt="" /></div>
+                <div class="row align-items-center no-gutters mb-5 mb-lg-0">
+                    <div class="col-xl-5 col-lg-6"><img class="img-fluid" src="{% static 'img/swedishmassage.jpg' %}" alt="" /></div>
                     <div class="col-xl-4 col-lg-5">
                         <div class="featured-text text-center text-lg-left">
-                            <h4></h4>
-                            <p class="text-black-50 mb-0">Grayscale is open source and MIT licensed. This means you can use it for any project - even commercial projects! Download it, customize it, and publish your website!</p>
+                            <h4><strong>Swedish Massage</strong></h4>
+                            <p class="text-black-50 mb-0"><strong>Swedish Massage</strong></p>
                         </div>
                     </div>
                 </div>
                 <!-- Project One Row-->
                 <div class="row justify-content-center no-gutters mb-5 mb-lg-0">
-                    <div class="col-lg-6"><img class="img-fluid" src="assets/img/demo-image-01.jpg" alt="" /></div>
+                    <div class="col-lg-6"><img class="img-fluid" src="{% static 'img/indiehead.jpg' %}" alt="" /></div>
                     <div class="col-lg-6">
                         <div class="bg-black text-center h-100 project">
                             <div class="d-flex h-100">
                                 <div class="project-text w-100 my-auto text-center text-lg-left">
-                                    <h4 class="text-white"></h4>
-                                    <p class="mb-0 text-white-50">An example of where you can put an image of a project, or anything else, along with a description.</p>
+                                    <h4 class="text-white"><p><strong>Indie(Indian)Head Massage</strong></p></h4>
+                                    <p class="mb-0 text-white-50">
+                                    <h5 class="text-white"><p> Headaches🤕Sinus problems🤯Stressed😣?</p></h5>
+                                    <h4 class="text-white"><p><strong> What is Indie Head Massage ?</strong> </p></h4>
+                                    <p class="mb-0 text-white-50">
+                                    Indie Head Massage is a form of massage therapy based on the ancient healing system of Ayurveda. Warm oil is applied to the scalp and hair, and combined with deep therapeutic massage to the face, scalp, neck and shoulders.
+                                    <h4 class="text-white"><br><p><strong>Benefits of Indie Head Massage include but are not limited to..</strong></p></h4>
+                                    <ul class="mb-0 text-white-50">
+                                    <li>Stress relief and deep relaxation
+                                    <li>relieves mm(dunno what this is) tension, eye strain, jaw ache, fatigue, mental tiredness
+                                    <li>helps prevent headaches, migraines, sinusitis, and insomnia
+                                    <li>increased blood circulation and O2 supply to brain, resulting in improved mental+ emotional wellness
+                                    <li>Give your hair shine and stimulates growth
+                                    <li>Drains lymph and helps reduce wrinkles</ul>
+                                    <h4 class="text-white"><br><p><strong>What To Expect</strong></p></h4>
+                                    <ul class="mb-0 text-white-50">
+                                    <li>30 minute Upper back, neck, and scalp</li>
+                                    <li>45 minute Upper back, neck, scalp, and face
+                                    <li>1 hour Upper back, neck, scalp, face, and hot coconut oil hair treatment</ul>
+                                    <p class="mb-0 text-white-50">** Don't worry about having clean hair. Please don't have makeup on and take off any necklaces and/or jewelry</p>
+                                    <ul class="mb-0 text-white-50">
+                                    <li>Start working on upper back to relieve overworked areas in back and shoulders. Massage neck and base of head that causes headaches. Stretching to relieve any stress and tension
+                                    <li> Finally the scalp is massaged, along with acupressure points on the head. Followed by working into the forehead, temple areas, sinuses and jaw.
+                                    <li>Lastly hot coconut oil is applied to hair and roots, then massaged into scalp. This can be left in for several hours or overnight, to help condition and give your hair a beautiful shine </ul>
                                     <hr class="d-none d-lg-block mb-0 ml-0" />
                                 </div>
                             </div>
@@ -92,15 +111,62 @@
                 </div>
                 <!-- Project Two Row-->
                 <div class="row justify-content-center no-gutters">
-                    <div class="col-lg-6"><img class="img-fluid" src="assets/img/demo-image-02.jpg" alt="" /></div>
+                    <div class="col-lg-6"><img class="img-fluid1" src="{% static 'img/newcup.jpg' %}" alt="" /></div>
                     <div class="col-lg-6 order-lg-first">
                         <div class="bg-black text-center h-100 project">
                             <div class="d-flex h-100">
-                                <div class="project-text w-100 my-auto text-center text-lg-right">
-                                    <h4 class="text-white"></h4>
-                                    <p class="mb-0 text-white-50"></p>
+                                <div class="project-text w-100 my-auto text-center text-lg-left">
+                                    <h4 class="text-white"><p><strong>Cupping Massage</strong></p></h4>
+                                    <p class="mb-0 text-white-50">
+                                    Cupping Is where a “vacuum” is created in a cup, drawing the skin up into the cup separating the layers of superficial fascia.
+                                    <br>The suction draws the blood to the level of the skin creating a “vacuum” below the skin.</p>
+                                    <h4 class="text-white"><br><p><strong>DID YOU KNOW?</strong></p></h4>
+                                    <ul class="mb-0 text-white-50">
+                                    <li>Cupping dates back to ancient civilizatons such as Egyptian, Chinese, and Middle Eastern
+                                    <li> A cupping mark is not a bruise. It is caused by the release of dead blood and other things like toxins in the body</li></ul>
+                                    <h4 class="text-white"><br><p><strong>Cupping Benefits</strong></p></h4>
+                                    <ul class="mb-0 text-white-50"><li>Improves blood circulation
+                                    <li>Improves immunity – draws toxins out
+                                    <li>Reduces inflammation- draws inflammation away from area
+                                    <li>Stretches muscles and connective tissue
+                                    <li>Loosens restrictions and adhesions
+                                    <li>Optimizes athletic performance</ul>
+                                    <h4 class="text-white"><br><p><strong>What To Expect Before (massage)</strong></p></h4>
+                                    <ul class="mb-0 text-white-50"><li> Cupping feels like a deep tissue massage, after the massage you may be sore for a couple days. This is totally normal
+                                    <li>Marks may be a purple, red, spotted, or pinky red colour
+                                    <li>Marks tend ot last for about a week and fade into a yellow,green colour just like a bruise does</ul>
+                                    <h4 class="text-white"><br><p><strong>What To Expect After (massage)</strong></p></h4>
+                                    <ul class="mb-0 text-white-50"><li>Cupping marks may not be visible until 24 hours later
+                                    <li>Anti-inflammatory cream may be used to help the marks fade faster
+                                    <li>You may be sore afterwards
+                                    <li>Drink lots of water
+                                    <li>Have a hot Epsom salt bath hot shower, jacuzzi, or wet sauna, for 20-40mins to help release the toxins
+                                    <li>Must be hot enough so that you’re sweating!!
                                     <hr class="d-none d-lg-block mb-0 mr-0" />
                                 </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Project three Row-->
+            <div class="row justify-content-center no-gutters mb-5 mb-lg-0">
+                <div class="col-lg-6"><img class="img-fluid" src="{% static 'img/swedishmassage.jpg' %}" alt="" /></div>
+                <div class="col-lg-6">
+                    <div class="bg-black text-center h-100 project">
+                        <div class="d-flex h-100">
+                            <div class="project-text w-100 my-auto text-center text-lg-left">
+                                <h4 class="text-white"><br><p><strong>Swedish Massage</strong></p></h4>
+                                <br><strong>Description</strong>
+                                <br>Swedish massage therapy involves soft, long, kneading strokes, as well as light, rhythmic, tapping strokes, on topmost layers of muscles. This is also combined with movement of the joints. By relieving muscle tension, Swedish therapy can be both relaxing and energizing.
+                                <br><strong>6 Benefits of Swedish Massage</strong>
+                                <br>*Pain management
+                                <br>*Increased blood flow
+                                <br>*Rehabilitation for muscle injuries
+                                <br>*Increased flexibility
+                                <br>*Reduced stress
+                                <br>*Improved immune system</p>
+                                <hr class="d-none d-lg-block mb-0 ml-0" />
                             </div>
                         </div>
                     </div>
@@ -172,12 +238,6 @@
         <!-- Footer-->
         <footer class="footer bg-black small text-center text-white-50"><div class="container">Copyright © Your Website 2020</div></footer>
         <!-- Bootstrap core JS-->
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-        <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js"></script>
-        <!-- Third party plugin JS-->
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.4.1/jquery.easing.min.js"></script>
-        <!-- Core theme JS-->
-        <script src="{% static 'js/services.js' %}"></script>
 
     </body>
 </html>
